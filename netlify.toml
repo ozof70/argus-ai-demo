@@ -1,0 +1,15 @@
+[build]
+  command = "node build-netlify.mjs"
+  publish = "netlify-dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+[functions]
+  directory = "netlify-functions"
+  node_bundler = "esbuild"
+
+[[redirects]]
+  from = "/operator"
+  to = "/index.html"
+  status = 200
