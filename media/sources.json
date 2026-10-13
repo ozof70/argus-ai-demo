@@ -1,0 +1,120 @@
+{
+  "dataset": "Emirates Stadium matchday surroundings footage",
+  "creator": "Big Japa",
+  "license": "CC BY 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Arsenal_vs_Crystal_Palace_-_Matchday_experience_-_emirates_stadium_London_-_Premier_league_match.webm",
+  "changes": "Ten separate 20-second excerpts of one venue recording; resized to 640px; H.264 at 25fps; muted; original 1x timeline retained. These are documentary views, not ten live CCTV cameras. Demonstration zones and alerts are synthetic.",
+  "clips": [
+    {
+      "id": "cam01",
+      "camera": "場館周邊片段01",
+      "creator": "Big Japa",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Arsenal_vs_Crystal_Palace_-_Matchday_experience_-_emirates_stadium_London_-_Premier_league_match.webm",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "startSeconds": 990,
+      "durationSeconds": 20,
+      "file": "/media/cam01.mp4"
+    },
+    {
+      "id": "cam02",
+      "camera": "場館周邊片段02",
+      "creator": "Big Japa",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Arsenal_vs_Crystal_Palace_-_Matchday_experience_-_emirates_stadium_London_-_Premier_league_match.webm",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "startSeconds": 1020,
+      "durationSeconds": 20,
+      "file": "/media/cam02.mp4"
+    },
+    {
+      "id": "cam03",
+      "camera": "場館周邊片段03",
+      "creator": "Big Japa",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Arsenal_vs_Crystal_Palace_-_Matchday_experience_-_emirates_stadium_London_-_Premier_league_match.webm",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "startSeconds": 1050,
+      "durationSeconds": 20,
+      "file": "/media/cam03.mp4"
+    },
+    {
+      "id": "cam04",
+      "camera": "場館周邊片段04",
+      "creator": "Big Japa",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Arsenal_vs_Crystal_Palace_-_Matchday_experience_-_emirates_stadium_London_-_Premier_league_match.webm",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "startSeconds": 1080,
+      "durationSeconds": 20,
+      "file": "/media/cam04.mp4"
+    },
+    {
+      "id": "cam05",
+      "camera": "場館周邊片段05",
+      "creator": "Big Japa",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Arsenal_vs_Crystal_Palace_-_Matchday_experience_-_emirates_stadium_London_-_Premier_league_match.webm",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "startSeconds": 1110,
+      "durationSeconds": 20,
+      "file": "/media/cam05.mp4"
+    },
+    {
+      "id": "cam06",
+      "camera": "場館周邊片段06",
+      "creator": "Big Japa",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Arsenal_vs_Crystal_Palace_-_Matchday_experience_-_emirates_stadium_London_-_Premier_league_match.webm",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "startSeconds": 1140,
+      "durationSeconds": 20,
+      "file": "/media/cam06.mp4"
+    },
+    {
+      "id": "cam07",
+      "camera": "場館周邊片段07",
+      "creator": "Big Japa",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Arsenal_vs_Crystal_Palace_-_Matchday_experience_-_emirates_stadium_London_-_Premier_league_match.webm",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "startSeconds": 1170,
+      "durationSeconds": 20,
+      "file": "/media/cam07.mp4"
+    },
+    {
+      "id": "cam08",
+      "camera": "場館周邊片段08",
+      "creator": "Big Japa",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Arsenal_vs_Crystal_Palace_-_Matchday_experience_-_emirates_stadium_London_-_Premier_league_match.webm",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "startSeconds": 1200,
+      "durationSeconds": 20,
+      "file": "/media/cam08.mp4"
+    },
+    {
+      "id": "cam09",
+      "camera": "場館周邊片段09",
+      "creator": "Big Japa",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Arsenal_vs_Crystal_Palace_-_Matchday_experience_-_emirates_stadium_London_-_Premier_league_match.webm",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "startSeconds": 1260,
+      "durationSeconds": 20,
+      "file": "/media/cam09.mp4"
+    },
+    {
+      "id": "cam10",
+      "camera": "場館周邊片段10",
+      "creator": "Big Japa",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Arsenal_vs_Crystal_Palace_-_Matchday_experience_-_emirates_stadium_London_-_Premier_league_match.webm",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "startSeconds": 1320,
+      "durationSeconds": 20,
+      "file": "/media/cam10.mp4"
+    }
+  ]
+}
