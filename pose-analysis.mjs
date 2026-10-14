@@ -25,7 +25,7 @@ window.ArgusPose={stop(){active?.stop();active=null;},attach(video){
   if(!matched||!previous||data.time<=previous.time||data.time-previous.time>.75)previous=null;
   target=selected.c;const values=measurements(selected.points,video.videoWidth,video.videoHeight);
   draw(selected.points);let valid=0;
-  values.forEach((a,i)=>{const c=cells[i];if(a.value===null){c.querySelector('strong').textContent='—';c.querySelector('small').textContent='遮擋／信心不足';return;}valid++;c.querySelector('strong').textContent=Math.round(a.value)+'°';const before=previous?.values[i].value;c.querySelector('small').textContent=before==null?'新比較起點':`Δ ${a.value-before>=0?'+':''}${Math.round(a.value-before)}°`;});
+  values.forEach((a,i)=>{const c=cells[i];if(a.value===null){c.querySelector('strong').textContent='—';c.querySelector('small').textContent='遮擋／信心不足';return;}valid++;c.querySelector('strong').textContent=Math.round(a.value)+'°';const before=previous?.values[i].value;c.querySelector('small').textContent=before==null?'新比較起點':Math.abs(a.value-before)>45?'追蹤變動，重新比較':`Δ ${a.value-before>=0?'+':''}${Math.round(a.value-before)}°`;});
   status.textContent=valid?`已辨識 ${poses.length} 人 · 顯示主要人物 · ${valid} 個有效關節 · 影片 ${data.time.toFixed(1)} 秒`:'人物可見，但關節遮擋或信心不足';previous={values,time:data.time};
  }
  async function tick(){
