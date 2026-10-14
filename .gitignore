@@ -6,3 +6,5 @@ dist/
 
 .netlify/
 netlify-dist/
+
+vendor/mediapipe/
