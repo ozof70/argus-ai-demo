@@ -35,3 +35,13 @@
 `node install-pose-assets.mjs` 下載固定版本 1.1.0 runtime 與官方 Lite 模型，逐檔驗證 SHA-256；`node build-netlify.mjs` 在缺少模型時自動執行。資產來源與雜湊見 `pose-assets.json`；MediaPipe 為 Apache 2.0，授權隨資產保存。
 
 檢查：`node --test pose-math.test.mjs netlify-proxy.test.mjs`。
+
+## 九宮格骨架線
+
+九路監看畫面自動顯示真人骨架線。綠色代表目前沒有未結案事件；橘色代表該鏡頭有待接案、已接案或已到場的模擬事件，結案後恢復綠色。線條顏色不代表模型已辨識出真實事故。
+
+固定錄影由 MediaPipe 逐影格辨識，每 0.12 秒取樣；`media/pose-cam01.json` 至 `pose-cam09.json` 保存實際模型座標與來源影片雜湊。前端依影片時間同步選取相鄰樣本，不生成替代人體、不填補辨識失敗影格。可按「骨架線」開關顯示；暫停、跳轉、影片循環與分區篩選會同步。點選鏡頭仍可啟動瀏覽器內的即時角度分析。
+
+驗證：`node --test pose-grid.test.mjs pose-records.test.mjs pose-math.test.mjs netlify-proxy.test.mjs`。
+
+骨架資料重建：先以 `python tools/extract-pose-frames.py --ffmpeg <FFmpeg 路徑>` 解碼，再執行 `node tools/pose-precompute-server.mjs`，開啟 `http://127.0.0.1:8768/pose-build.html` 點選「辨識九段錄影」。完成後重新執行 `node build-netlify.mjs`。

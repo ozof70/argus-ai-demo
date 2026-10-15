@@ -22,6 +22,8 @@ export default async function handler(request){
  if(!['GET','HEAD'].includes(request.method)){body=await request.arrayBuffer();if(body.byteLength>16384)return Response.json({error:'請求內容過大'},{status:413});}
  try{
   const response=await fetch(target,{method:request.method,headers,body,redirect:'manual',signal:AbortSignal.timeout(15000)}),out=new Headers(response.headers);
+  const sessionCookie=response.headers.getSetCookie().find(value=>value.startsWith('argus_demo='));
+  out.delete('set-cookie');if(sessionCookie)out.set('set-cookie',sessionCookie);
   out.delete('content-encoding');out.delete('content-length');out.set('cache-control','no-store');
   const location=out.get('location');if(location?.startsWith(UPSTREAM))out.set('location',location.slice(UPSTREAM.length)||'/');
   if(request.method!=='HEAD'&&response.ok&&out.get('content-type')?.includes('application/json'))return new Response(JSON.stringify(nineCameraSnapshot(await response.json())),{status:response.status,headers:out});

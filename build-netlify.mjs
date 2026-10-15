@@ -2,7 +2,7 @@ import {mkdir,copyFile,cp,writeFile} from 'node:fs/promises';
 const root=new URL('./',import.meta.url),out=new URL('netlify-dist/',root);
 await import('./install-pose-assets.mjs');
 await mkdir(out,{recursive:true});
-for(const name of ['index.html','app.js','style.css','logo.svg','pose-analysis.mjs','pose-math.mjs','pose-worker.mjs'])await copyFile(new URL(name,root),new URL(name,out));
+for(const name of ['index.html','app.js','style.css','logo.svg','pose-analysis.mjs','pose-math.mjs','pose-worker.mjs','pose-grid.mjs','pose-grid-utils.mjs'])await copyFile(new URL(name,root),new URL(name,out));
 await cp(new URL('vendor/',root),new URL('vendor/',out),{recursive:true});
 await cp(new URL('media/',root),new URL('media/',out),{recursive:true});
 await writeFile(new URL('_redirects',out),'/operator /index.html 200\n');

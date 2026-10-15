@@ -8,3 +8,5 @@ dist/
 netlify-dist/
 
 vendor/mediapipe/
+
+.pose-frames/

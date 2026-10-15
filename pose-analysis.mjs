@@ -12,8 +12,8 @@ window.ArgusPose={stop(){active?.stop();active=null;},attach(video){
  function stop(){enabled=false;epoch++;clearTimeout(timer);worker?.terminate();worker=null;ready=false;busy=false;clear('關節辨識已停止');button.textContent='開始關節辨識';button.disabled=false;}
  function draw(points){
   canvas.width=video.videoWidth;canvas.height=video.videoHeight;ctx.clearRect(0,0,canvas.width,canvas.height);
-  for(const [a,b] of BONES){if(!visible(points[a])||!visible(points[b]))continue;const x=points[a],y=points[b];ctx.beginPath();ctx.moveTo(x.x*canvas.width,x.y*canvas.height);ctx.lineTo(y.x*canvas.width,y.y*canvas.height);ctx.strokeStyle='#111';ctx.lineWidth=6;ctx.stroke();ctx.strokeStyle='#fff';ctx.lineWidth=3;ctx.stroke();}
-  for(const [,a,b,c] of JOINTS){if(![a,b,c].every(i=>visible(points[i])))continue;const p=points[b];ctx.beginPath();ctx.arc(p.x*canvas.width,p.y*canvas.height,4,0,Math.PI*2);ctx.fillStyle='#fff';ctx.fill();ctx.strokeStyle='#111';ctx.lineWidth=1.5;ctx.stroke();}
+  for(const [a,b] of BONES){if(!visible(points[a])||!visible(points[b]))continue;const x=points[a],y=points[b];ctx.beginPath();ctx.moveTo(x.x*canvas.width,x.y*canvas.height);ctx.lineTo(y.x*canvas.width,y.y*canvas.height);ctx.strokeStyle='#111';ctx.lineWidth=6;ctx.stroke();ctx.strokeStyle=document.querySelector(`[data-camera="${video.dataset.feed}"]`)?.classList.contains('alert')?'#ff9a38':'#25d486';ctx.lineWidth=3;ctx.stroke();}
+  for(const [,a,b,c] of JOINTS){if(![a,b,c].every(i=>visible(points[i])))continue;const p=points[b];ctx.beginPath();ctx.arc(p.x*canvas.width,p.y*canvas.height,4,0,Math.PI*2);ctx.fillStyle=document.querySelector(`[data-camera="${video.dataset.feed}"]`)?.classList.contains('alert')?'#ff9a38':'#25d486';ctx.fill();ctx.strokeStyle='#111';ctx.lineWidth=1.5;ctx.stroke();}
  }
  function result(data){
   busy=false;if(!enabled||data.generation!==generation)return;
